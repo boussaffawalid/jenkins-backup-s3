@@ -15,7 +15,7 @@ init()
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-DEFAULT_REGION='us-east-1'
+DEFAULT_REGION='us-west-1'
 
 ch = logging.StreamHandler()
 
@@ -249,7 +249,7 @@ def restore(ctx, backup_id, jenkins_home, tmp, tar, tar_opts, dry_run):
 
 
 def main():
-    cli(obj={})
+    cli(obj={}, auto_envvar_prefix='JENKINS_BACKUP')
 
 
 if __name__ == '__main__':
