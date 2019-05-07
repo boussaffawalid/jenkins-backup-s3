@@ -132,7 +132,7 @@ def create(ctx, jenkins_home, tmp, tar, tar_opts, exclude_jenkins_war, exclude_v
     if exclude_builds:
         command.append('--exclude=jobs/*/builds/*')
     if exclude_workspace:
-        command.append('--exclude=jobs/*/workspace/*')
+        command.append('--exclude=workspace --exclude=jobs/*/workspace/*')
     if exclude_maven:
         command.append('--exclude=.m2/repository')
     if exclude_logs:

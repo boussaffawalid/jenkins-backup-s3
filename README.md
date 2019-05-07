@@ -5,7 +5,7 @@ runs silently (no output) with proper exit codes. Log Level option enables outpu
 
 ## Setup
 
-`pip install git+https://github.com/boussaffawalid/jenkins-backup-s3.git`
+`pip3 install git+https://github.com/boussaffawalid/jenkins-backup-s3.git`
 
 ### Configure S3 and IAM
 
@@ -23,6 +23,8 @@ Options can be set directly or via and environment variable.
 
 The only required option is your S3 bucket:
   - `jenkins-backup --bucket={BUCKET_NAME}`
+  Or set it via the envirment variable
+  - `JENKINS_BACKUP_BUCKET`
 
 Other available options are:
 
